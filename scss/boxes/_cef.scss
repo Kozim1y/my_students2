@@ -1,0 +1,92 @@
+.cef-box {
+  background-color: #ddd;
+  padding: 30px 0;
+}
+
+.cef {
+	@include flexBox(flex, space-between, center, nowrap);
+
+}
+.cef-img-box {
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+.cef-content-box {
+  margin-left: 30px;
+}
+.cef-themme-info {
+  @include textStyle(16px, 500, 19px, $more);
+  font-family: 'Roboto';
+  text-align:start;
+  letter-spacing: 0.2em;
+text-transform: uppercase;
+}
+.cef-content-text {
+  @include textStyle(31px, 500, 41px, #000000);
+  font-family: 'Philosopher';
+  max-width: 450px;
+  padding: 12px 0;
+ 
+}
+.cef-content-info {
+  @include textStyle(16px, 500, 24px, #000000);
+  font-family: 'Roboto';
+  max-width: 480px;
+  opacity: 0.8;
+  padding: 8px 0;
+
+}
+.cef-btn {
+  @include allBtn ($more, 5px, none, 13px 27px);
+  @include textStyle(16px, 500, 13px, #fff);
+  font-family: 'roboto';
+  margin-top: 10px;
+
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+
+@media (max-width:732px) {
+  .cef {
+    flex-direction: column;
+  }
+
+  .cef-content-box{
+    text-align: center;
+    padding: 30px 0;
+    margin: 0;
+  }
+
+  .cef-themme-info{
+    text-align: center;
+  }
+
+  .cef-content-info{
+    margin:  0 auto;
+  }
+
+  .cef-content-text{
+    margin:  0 auto;
+  }
+}
+
+@media (max-width:374px) {
+  .cef-content-text{
+  @include textStyle(28px, 500, 35px, #000000);
+  padding: 0;
+}
+
+.cef-box {
+  padding: 0;
+}
+}

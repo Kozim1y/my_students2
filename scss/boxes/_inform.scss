@@ -1,0 +1,71 @@
+.inform-box {
+  background-color: #DDD3C8;
+  padding: 70px 0;
+}
+.inform {
+  text-align: center
+}
+.inform-themme {
+  @include textStyle(16px, 500, 19px, $more);
+  font-family: 'Roboto';
+  text-align: center;
+  letter-spacing: 0.2em;
+text-transform: uppercase;
+}
+.inform-text {
+  @include textStyle(31px, 700, 35px, #150C01);
+  font-family: 'Philosopher';
+  text-align: center;
+  padding: 5px 0 15px 0;
+  max-width: 650px;
+  margin: 0 auto;
+}
+.form {
+padding: 25px 0;
+@include flexBox(flex, center, center, nowrap);
+
+}
+.form-input {
+  padding: 25px 0;
+  width: 50%;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  padding-left: 15px;
+  @include textStyle(16px, 400, 16px, #000000);
+  font-family: 'Roboto';
+  border-radius: 10px;
+}
+.form-btn {
+  @include allBtn ($more, 5px, none, 25px 42px);
+  @include textStyle(16px, 500, 18px, #fff);
+  font-family: 'roboto';
+  margin-left: -20px;
+
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+
+@media (max-width:420px) {
+  .form {
+    padding: 25px 0;
+    flex-direction: column;
+    }
+
+    .form-btn{
+      margin: 10px 0;
+
+    }
+
+    .form-input{
+      width: 100%;
+    }
+}

@@ -1,0 +1,122 @@
+.phone-box {
+  background-color: #E9E5E1;
+  // margin-top: 100px;
+}
+.phone {
+	@include flexBox(flex, space-between, center, nowrap);
+}
+.phone-content {
+  padding: 20px 0;
+}
+.phone-themme-info {
+  @include textStyle(16px, 500, 19px, $more);
+  font-family: 'Roboto';
+  text-align:start;
+  letter-spacing: 0.2em;
+text-transform: uppercase;
+}
+.phone-content-text {
+  @include textStyle(31px, 500, 41px, #000000);
+  font-family: 'Philosopher';
+  max-width: 450px;
+  padding: 12px 0;
+}
+.phone-content-info {
+  @include textStyle(16px, 500, 24px, #000000);
+  font-family: 'Roboto';
+  max-width: 570px;
+  opacity: 0.8;
+  padding: 13px 0;
+}
+.down-box {
+	@include flexBox(flex, start, center, nowrap);
+
+}
+.apple-btn {
+	@include flexBox(flex, space-between, center, nowrap);
+  @include allBtn (rgba(0, 0, 0, 1), 5px, none, 10px 23px);
+  @include textStyle(16px, 500, 16px, #fff);
+  font-family: 'roboto';
+
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+  margin-right: 15px;
+}
+
+.play-btn {
+	@include flexBox(flex, space-between, center, nowrap);
+  @include allBtn (transparent, 5px, 1px solid $more, 10px 14px);
+  @include textStyle(16px, 500, 16px, $more);
+  font-family: 'roboto';
+  margin-left: 20px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+  margin-right: 15px;
+
+}
+.phone-img-box {
+  margin: -100px 0;
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+@media (max-width:560px) {
+  .phone {
+    flex-direction: column;
+  }
+
+  .phone-content {
+    text-align: center;
+  }
+
+  .phone-themme-info {
+    text-align: center;
+  }
+
+  .phone-content-text{
+    margin: 0 auto;
+  }
+
+  .down-box{
+	@include flexBox(flex, space-between, center, wrap);
+   
+  }
+
+  .play-btn{
+    margin: 5px auto;
+  }
+
+  .apple-btn{
+    margin: 5px auto;
+  }
+
+  .phone-img-box {
+    margin: 0px 0;
+  
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+}

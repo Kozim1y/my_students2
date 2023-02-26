@@ -1,0 +1,63 @@
+footer{
+  background-color: #252525;
+  padding: 35px 0;
+}
+.footer-in {
+	@include flexBox(flex, space-between, start, wrap);
+
+}
+.logo-line {
+  margin-top: 18px;
+
+}
+.footer-item-logo {
+
+}
+.footer-logo {
+}
+.logo-line-item {
+  margin-top: 10px;
+ a{
+  @include textStyle(14px, 400, 16px, #fff);
+  font-family: 'Roboto';
+  opacity: 0.8;
+ }
+}
+.web-line {
+  margin: 0 9px;
+}
+.web-item {
+  margin: 10px 0;
+}
+
+.web-item:nth-child(1) {
+  margin: 20px 0;
+}
+.web-item-hero-link {
+  @include textStyle(18px, 700, 20px, #fff);
+  font-family: 'Philosopher';
+}
+.web-item-link {
+  @include textStyle(14px, 400, 16px, #fff);
+  font-family: 'Roboto';
+  opacity: 0.8;
+}
+.f-social-line {
+	@include flexBox(flex, space-between, start, nowrap);
+  padding: 10px 0;
+
+}
+.f-line-item {
+  margin-right: 10px;
+
+  cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}

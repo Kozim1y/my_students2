@@ -1,0 +1,95 @@
+.hero-box {
+  background-color:#DDDDDD;
+  padding: 20px 0;
+
+}
+
+.hero {
+	@include flexBox(flex, space-between, center, nowrap);
+
+}
+
+.hero-content-text {
+  @include textStyle(48px, 500, 54px, #150C01);
+  font-family: 'Philosopher';
+  max-width: 550px
+  
+}
+.hero-content-info {
+  @include textStyle(16px, 500, 24px, #150C01);
+  font-family: 'roboto';
+  max-width: 550px;
+  padding: 25px 0;
+}
+
+.hero-btn {
+  @include allBtn ($more, 5px, none, 16px 27px);
+  @include textStyle(16px, 500, 16px, #fff);
+  font-family: 'roboto';
+
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+.hero-nothing-btn {
+  @include allBtn (transparent, 5px, 1px solid $more, 16px 20px);
+  @include textStyle(16px, 500, 16px, $more);
+  font-family: 'roboto';
+  margin-left: 20px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+.hero-img-box {
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+@media (max-width:680px) {
+  .hero{
+    flex-direction: column;
+  }
+
+  .hero-content-box {
+    text-align: center;
+  }
+
+.hero-content-text {
+  margin: 0 auto;
+}
+
+.hero-content-info {
+  margin: 0 auto;
+}
+}
+
+
+@media (max-width:327px) {
+  .hero-content-text {
+    @include textStyle(40px, 500, 48px, #150C01);
+}
+
+
+.hero-nothing-btn{
+  margin: 15px 0;
+}
+
+}

@@ -1,0 +1,131 @@
+.cards-box {
+  background-color: #ddd;
+  padding: 135px 0;
+}
+.card-info {
+  @include textStyle(16px, 500, 19px, $more);
+  font-family: 'Roboto';
+  text-align: center;
+  letter-spacing: 0.2em;
+text-transform: uppercase;
+}
+.card-text {
+  @include textStyle(31px, 700, 35px, #150C01);
+  font-family: 'Philosopher';
+  text-align: center;
+  padding: 5px 0 15px 0;
+}
+.cards-themme-info {
+  @include textStyle(16px, 500, 19px, #150C01);
+  font-family: 'Roboto';
+  text-align: center;
+  opacity: 0.8;
+  max-width: 650px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.cards {
+  padding: 25px 0;
+}
+.card-line {
+	@include flexBox(flex, space-between, center, wrap);
+  
+}
+
+.card-pad {
+  padding: 21px 25px;
+}
+.card-line-item {
+  width: 360px;
+  height: 446px;
+  background-color: #fff;
+  border-radius: 75px 10px 10px 10px;
+  margin: 10px auto;
+}
+.price-box {
+	@include flexBox(flex, space-between, center, nowrap);
+
+}
+.card-name {
+  @include textStyle(25px, 700, 24px, #150C01);
+  font-family: 'Philosopher';
+}
+.price-num {
+  @include textStyle(25px, 700, 24px, #150C01);
+  font-family: 'Philosopher';
+}
+.card-line-info {
+  @include textStyle(16px, 500, 19px, #150C01);
+  font-family: 'Roboto';
+  opacity: 0.8;
+  padding: 20px 0;
+}
+.btn-star-box {
+	@include flexBox(flex, space-between, center, nowrap);
+
+}
+.card-btn {
+  @include allBtn ($more, 5px, none, 10px 15px);
+  @include textStyle(16px, 500, 16px, #fff);
+  font-family: 'roboto';
+
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+.star-line {
+	@include flexBox(flex, center, center, nowrap);
+
+}
+.star-item {
+  margin-left: 5px;
+
+}
+
+.more-btn {
+  margin: 0 auto;
+  @include allBtn (transparent, 5px, 1px solid $more, 16px 16px);
+  @include textStyle(16px, 500, 16px, $more);
+  font-family: 'roboto';
+	@include flexBox(flex, center, center, nowrap);
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+
+@media (max-width:560px) {
+  .cards-box {
+    padding: 35px 0;
+  }
+}
+
+
+
+@media (max-width:400px) {
+  .card-line{
+    overflow-x: scroll;
+	@include flexBox(flex, space-between, center, nowrap);
+
+  }
+
+  .card-line-item{
+    scale: 0.7;
+    margin: -60px -30px;
+  }
+}
+
+

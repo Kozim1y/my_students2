@@ -1,0 +1,101 @@
+header {
+  // height: 0;
+  background-color:#DDDDDD;
+}
+
+header {
+ nav {
+	@include flexBox(flex, center, center, nowrap);
+
+ }
+}
+
+
+.header-in {
+  padding: 20px 0;
+	@include flexBox(flex, space-between, center, nowrap);
+
+}
+.header-line {
+	@include flexBox(flex, space-between, center, nowrap);
+}
+.header-item {
+  margin-left: 35px;
+  transition: all 0.4s ease;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+
+@mixin textStyle($size, $weight, $line, $color) {
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $line;
+	color: $color;
+}
+.line-item-link {
+@include textStyle(16px, 500, 22px, #150C01);
+font-family: 'roboto';
+transition: all 0.4s ease ;
+&:hover{
+  color: $more;
+}
+}
+.b-b-box {
+	@include flexBox(flex, space-between, center, nowrap);
+
+}
+.header-btn {
+  @include allBtn ($more, 5px, none, 13px 23px);
+  @include textStyle(16px, 500, 18px, #fff);
+  font-family: 'roboto';
+
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+.burger {
+	display: none;
+  margin-left: 10px;
+}
+
+.burger {
+	span {
+		display: block;
+		width: 28px;
+		height: 4px;
+		background-color: $more;
+		border-radius: 4px;
+	}
+
+	span:nth-child(2) {
+		margin: 4px 0;
+	}
+}
+
+
+
+@media (max-width:690px) {
+
+  .header-line{
+    display: none;
+  }
+
+  .burger{
+    display: block;
+  }
+  
+}
+
